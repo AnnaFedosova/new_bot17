@@ -1,7 +1,7 @@
 import logging
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 
-import settings 
+import settings
 
 logging.basicConfig(filename='bot.log', level=logging.INFO)
 PROXY = {'proxy_url': settings.PROXY_URL,
@@ -11,7 +11,7 @@ PROXY = {'proxy_url': settings.PROXY_URL,
 def greet_user(update, context):
     print("Вызван /старт")
     update.message.reply_text("Здравствуй, пользователь")
-
+    
 
 def talk_to_me(update,context):
     text = update.message.text
